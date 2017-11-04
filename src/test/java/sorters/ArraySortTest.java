@@ -1,14 +1,29 @@
 package sorters;
 
+import fillers.AutoFillers;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class ArraySortTest {
-    @Test
-    public void sort() throws Exception {
+    @BeforeClass
+    public static void setUp() {
+        System.out.println("\nTesting class \"ArraySort\" - START.\n");
+
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        System.out.println("Testing class \"ArraySort\" - FINISH.\n");
     }
 
     @Test
-    public void getMethod() throws Exception {
+    public void sort() throws Exception {
+        System.out.print("sort - >>");
+        int[] array = AutoFillers.randomFilter();
+        ArraySort arraySort = new ArraySort();
+        arraySort.sort(array);
+        System.out.println("OK!!!");
     }
 
 }

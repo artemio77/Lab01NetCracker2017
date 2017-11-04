@@ -7,13 +7,12 @@ import sorters.QuickSort;
 
 import java.io.FileNotFoundException;
 
-import static loggenerator.Log4jMain.*;
-
 
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException, NoSuchMethodException {
         int[] array = AutoFillers.randomFilter();
+
         int[] array1 = array.clone();
         int[] array2 = array.clone();
 

@@ -51,10 +51,6 @@ public class LogGenerator {
         }
     }
 
-    public static void refreshLogFile() throws IOException {
-
-    }
-
     public static void cleanLogFile() {
         File logfile = new File("/logs/app-log.log");
         try {

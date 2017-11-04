@@ -1,7 +1,6 @@
 package fillers;
 
 import java.text.DecimalFormat;
-import java.util.Arrays;
 import java.util.Random;
 /**
  * Класс который реализирует методы для заполнения масивов с данными
@@ -13,7 +12,7 @@ import java.util.Random;
  */
 public class AutoFillers {
 
-    private static int ARRAY_LENGHT = 50000000;
+    private static int ARRAY_LENGHT = 20000;
 
 
     private static int[] arr = new int[ARRAY_LENGHT];
@@ -50,7 +49,7 @@ public class AutoFillers {
     }
 
 
-    public static void firstFiller() {
+    public static int[] firstFiller() {
 
         for (int j = 0; j < arr.length; j++) {
 
@@ -58,12 +57,12 @@ public class AutoFillers {
 
 
         }
-        System.out.println(Arrays.toString(arr));
+        return arr;
 
 
     }
 
-    public static void secondFiller() {
+    public static int[] secondFiller() {
 
         for (int j = 0; j < arr.length; j++) {
 
@@ -73,10 +72,10 @@ public class AutoFillers {
             }
 
         }
-        System.out.println(Arrays.toString(arr));
+        return arr;
     }
 
-    public static void backFiller() {
+    public static int[] backFiller() {
         int i = arr.length;
         for (int j = 0; j < arr.length; j++) {
 
@@ -84,8 +83,8 @@ public class AutoFillers {
             i--;
 
         }
-        System.out.println(Arrays.toString(arr));
 
+        return arr;
     }
 
     public static int[] randomFilter() {

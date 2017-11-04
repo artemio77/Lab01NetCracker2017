@@ -42,15 +42,4 @@ public class Log4jMain {
         System.out.println("");
     }
 
-
-    public void logfAllSortsMethod(int[] array) {
-
-
-        int[] array1 = array.clone();
-        int[] array2 = array.clone();
-        int[] array3 = array.clone();
-        int[] array4 = array.clone();
-
-
-    }
 }
