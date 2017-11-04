@@ -1,7 +1,5 @@
 package sorters;
 
-import java.lang.reflect.Method;
-
 /**
  * Класс сортировки масива который реализует
  * сортировку пузырьком от меньшего к большему
@@ -9,7 +7,6 @@ import java.lang.reflect.Method;
  * @author Artem Derevets (derevets.artem@gmail.com)
  * @version 1.0
  * @see AllSorts
-
  */
 public class BubleSortStartToEnd extends AllSorts {
 
@@ -18,7 +15,7 @@ public class BubleSortStartToEnd extends AllSorts {
         for (int j = 0; j < arr.length - 1; j++) {
             for (int k = j + 1; k < arr.length; k++) {
                 if (arr[j] > arr[k]) {
-                    exchange(j, k,arr);
+                    exchange(j, k, arr);
                 }
             }
         }
@@ -26,7 +23,5 @@ public class BubleSortStartToEnd extends AllSorts {
 
     }
 
-    public Method getMethod(String sort, Class<int[]> aClass) {
-        return null;
-    }
+
 }

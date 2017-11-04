@@ -1,6 +1,5 @@
 package sorters;
 
-import java.lang.reflect.Method;
 import java.util.Arrays;
 
 /**
@@ -19,7 +18,4 @@ public class ArraySort extends AllSorts {
         return arr;
     }
 
-    public Method getMethod(String sort, Class<int[]> aClass) {
-        return null;
-    }
 }
