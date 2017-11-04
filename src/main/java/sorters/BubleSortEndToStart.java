@@ -1,0 +1,33 @@
+package sorters;
+
+import java.lang.reflect.Method;
+
+/**
+ * Класс сортировки масива который реализует
+ * сортировку пузырьком от большего к меньшему
+ *
+ * @author Artem Derevets (derevets.artem@gmail.com)
+ * @version 1.0
+ * @see AllSorts
+
+ */
+public class BubleSortEndToStart extends AllSorts {
+    @Override
+    public int[] sort(int[] arr) {
+        for (int j = 0; j < arr.length - 1; j++) {
+            for (int k = j + 1; k < arr.length; k++) {
+                if (arr[j] < arr[k]) {
+                    exchange(j,k,arr);
+                }
+            }
+        }
+        return arr;
+
+
+    }
+
+    public Method getMethod(String sort, Class<int[]> aClass) {
+        return null;
+    }
+}
+
