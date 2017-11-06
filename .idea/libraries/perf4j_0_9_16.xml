@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/Downloads/perf4j-0.9.16.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/perf4j-0.9.16-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

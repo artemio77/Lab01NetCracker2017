@@ -18,35 +18,35 @@ public class LogGeneratorTest {
     @Test
     public void logGenerator() throws Exception {
         System.out.print("logGenerator - >>");
-        LogGenerator.logGenerator();
+        LogGenerator.class.getDeclaredMethod("logGenerator");
         System.out.println("OK!!!");
     }
 
     @Test
     public void openLogFile() throws Exception {
         System.out.print("logGenerator - >>");
-        LogGenerator.logGenerator();
+        LogGenerator.class.getDeclaredMethod("openLogFile");
         System.out.println("OK!!!");
     }
 
     @Test
     public void cleanLogFile() throws Exception {
         System.out.print("cleanLogFile - >>");
-        LogGenerator.cleanLogFile();
+        LogGenerator.class.getDeclaredMethod("cleanLogFile");
         System.out.println("OK!!!");
     }
 
     @Test
     public void openExelFile() throws Exception {
         System.out.print("openExelFile - >>");
-        LogGenerator.openExelFile();
+        LogGenerator.class.getDeclaredMethod("cleanLogFile");
         System.out.println("OK!!!");
     }
 
     @Test
     public void exelFileGenerator() throws Exception {
         System.out.print("exelFileGenerator - >>");
-        LogGenerator.exelFileGenerator();
+        LogGenerator.class.getDeclaredMethod("exelFileGenerator");
         System.out.println("OK!!!");
     }
 

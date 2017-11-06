@@ -1,7 +1,14 @@
 package loggenerator;
 
+import com.sun.webkit.perf.PerfLogger;
+import org.apache.log4j.Logger;
+import org.perf4j.GroupedTimingStatistics;
+import org.perf4j.LogParser;
+import org.perf4j.TimingStatistics;
+
 import java.io.*;
 import java.awt.Desktop;
+
 
 /**
  * Класс для работы с файлов с логами о работе методов,
@@ -18,7 +25,7 @@ public class LogGenerator {
     private LogGenerator() {
     }
 
-    public static void logGenerator() {
+    private static void logGenerator() {
         StringBuffer output = new StringBuffer();
         String command = "java -jar perf4j-0.9.16.jar /logs/app-log.log -t 900000";
         Process p;
@@ -36,10 +43,15 @@ public class LogGenerator {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
         System.out.println(output);
+
+        System.out.println();
     }
 
-    public static void openLogFile() throws FileNotFoundException {
+    private static void openLogFile() {
+
         Desktop desktop = null;
         if (Desktop.isDesktopSupported()) {
             desktop = Desktop.getDesktop();
@@ -51,7 +63,7 @@ public class LogGenerator {
         }
     }
 
-    public static void cleanLogFile() {
+    private static void cleanLogFile() {
         File logfile = new File("/logs/app-log.log");
         try {
             FileOutputStream writer = new FileOutputStream(logfile);
@@ -63,7 +75,7 @@ public class LogGenerator {
 
     }
 
-    public static void openExelFile() {
+    private static void openExelFile() {
         Desktop desktop = null;
         if (Desktop.isDesktopSupported()) {
             desktop = Desktop.getDesktop();
@@ -76,7 +88,7 @@ public class LogGenerator {
 
     }
 
-    public static void exelFileGenerator() {
+    private static void exelFileGenerator() {
 
         try {
             Runtime.getRuntime().exec("java -jar perf4j-0.9.16.jar --graph perfGraphs.xls /logs/app-log.log");
