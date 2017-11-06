@@ -28,7 +28,7 @@ public class Main {
 
 
         modulLogGenerator.modulLogGenerator();
-        //modulLogGenerator.modulOpenLogFile();
+        modulLogGenerator.modulOpenLogFile();
        modulLogGenerator.modulExelFileGenerator();
         modulLogGenerator.modulOpenExelFile();
 
