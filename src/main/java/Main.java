@@ -11,26 +11,26 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+    public static void main(String[] args) throws FileNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException, NoSuchFieldException {
         int[] array = AutoFillers.randomFilter();
 
         int[] array1 = array.clone();
         int[] array2 = array.clone();
 
         ModulLogGenerator modulLogGenerator = new ModulLogGenerator();
-       // modulLogGenerator.modulCleanLogFile();
+       modulLogGenerator.modulCleanLogFile();
         MergerSort mergerSort = new MergerSort();
         QuickSort quickSort = new QuickSort();
         ArraySort arraySort = new ArraySort();
         Log4jMain.logSort(array, mergerSort);
         Log4jMain.logSort(array1, quickSort);
         Log4jMain.logSort(array2, arraySort);
-
+        Log4jMain.logStatistic();
 
         modulLogGenerator.modulLogGenerator();
         modulLogGenerator.modulOpenLogFile();
-       modulLogGenerator.modulExelFileGenerator();
-        modulLogGenerator.modulOpenExelFile();
+    //   modulLogGenerator.modulExelFileGenerator();
+      //  modulLogGenerator.modulOpenExelFile();
 
 
     }

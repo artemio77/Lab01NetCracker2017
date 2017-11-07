@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public class AutoFillers {
 
-    private static int ARRAY_LENGHT = 25000000;
+    private static int ARRAY_LENGHT = 5500000;
 
 
     private static int[] arr = new int[ARRAY_LENGHT];
