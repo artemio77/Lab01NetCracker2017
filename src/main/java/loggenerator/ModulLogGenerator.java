@@ -24,7 +24,6 @@ public class ModulLogGenerator implements LogInterface {
     }
 
     public void modulOpenExelFile() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-
         Method method = LogGenerator.class.getDeclaredMethod("openExelFile");
         method.setAccessible(true);
         method.invoke(null, null);

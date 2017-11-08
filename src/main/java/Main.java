@@ -18,7 +18,7 @@ public class Main {
         int[] array2 = array.clone();
 
         ModulLogGenerator modulLogGenerator = new ModulLogGenerator();
-       modulLogGenerator.modulCleanLogFile();
+        modulLogGenerator.modulCleanLogFile();
         MergerSort mergerSort = new MergerSort();
         QuickSort quickSort = new QuickSort();
         ArraySort arraySort = new ArraySort();
@@ -26,11 +26,9 @@ public class Main {
         Log4jMain.logSort(array1, quickSort);
         Log4jMain.logSort(array2, arraySort);
         Log4jMain.logStatistic();
-
-        modulLogGenerator.modulLogGenerator();
         modulLogGenerator.modulOpenLogFile();
-    //   modulLogGenerator.modulExelFileGenerator();
-      //  modulLogGenerator.modulOpenExelFile();
+        //   modulLogGenerator.modulExelFileGenerator();
+        //  modulLogGenerator.modulOpenExelFile();
 
 
     }

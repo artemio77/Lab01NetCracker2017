@@ -3,8 +3,6 @@ package loggenerator;
 import java.lang.reflect.InvocationTargetException;
 
 public interface LogInterface {
-
-
     void modulOpenLogFile() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException;
 
     void modulLogGenerator() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException;
@@ -14,8 +12,4 @@ public interface LogInterface {
     void modulOpenExelFile() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException;
 
     void modulExelFileGenerator() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException;
-
-    
-
-
-}
+    }

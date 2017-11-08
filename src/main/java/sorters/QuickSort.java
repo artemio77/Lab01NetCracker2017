@@ -12,28 +12,18 @@ import fillers.AutoFillers;
  */
 
 public class QuickSort extends AllSorts {
-
-
     @Override
     public int[] sort(int[] arr) {
         // check for empty or null array
-
         array = arr;
         AutoFillers.setArrayLenght(arr.length);
-
-
         quicksort(0, AutoFillers.getArrayLenght() - 1);
-
         return array;
-
-
     }
 
     private boolean quicksort(int low, int high) {
         int i = low, j = high;
-
         int pivot = array[low + (high - low) / 2];
-
         // Divide into two lists
         while (i <= j) {
             while (array[i] < pivot) {
@@ -48,7 +38,6 @@ public class QuickSort extends AllSorts {
                 j--;
             }
         }
-
         // Recursion
         if (low < j)
             quicksort(low, j);
@@ -56,8 +45,6 @@ public class QuickSort extends AllSorts {
             quicksort(i, high);
         return true;
     }
-
-
 }
 
 

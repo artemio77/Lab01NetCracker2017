@@ -12,8 +12,6 @@ import java.util.Arrays;
 public class ArraySort extends AllSorts {
     @Override
     public int[] sort(int[] arr) {
-
-
         Arrays.sort(arr);
         return arr;
     }

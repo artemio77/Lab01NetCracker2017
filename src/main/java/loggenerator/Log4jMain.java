@@ -24,17 +24,17 @@ import java.util.ArrayList;
 public class Log4jMain {
     private final static Logger logger = Logger.getLogger(Log4jMain.class);
     private final static ArrayList<StopWatch> arrayList = new ArrayList<StopWatch>();
-      
+    private static GroupedTimingStatistics groupedTimingStatistics = new GroupedTimingStatistics();
+
     private Log4jMain() {
     }
 
     public static void logSort(int[] array, Object mClassObject) throws NoSuchMethodException, IllegalArgumentException, InvocationTargetException, IllegalAccessException, NoSuchFieldException {
         Method method = mClassObject.getClass().getMethod("sort", int[].class);
-
         logger.info(mClassObject.getClass().getSimpleName() + " " + AutoFillers.formatNumbers(AutoFillers.getArrayLenght()) + " elements");
         StopWatch stopWatch = new Log4JStopWatch(mClassObject.getClass().getSimpleName());
         try {
-
+            groupedTimingStatistics.setStartTime(System.currentTimeMillis());
             method.invoke(mClassObject, array);
 
             logger.info("Sort is successful !!!");
@@ -43,26 +43,17 @@ public class Log4jMain {
             e.printStackTrace();
         }
         arrayList.add(stopWatch);
-
-
-
         stopWatch.stop();
-
-
         System.out.println("");
     }
 
     public static void logStatistic() {
-
         logger.info(getArrayList());
     }
 
     private static String getArrayList() {
-        GroupedTimingStatistics groupedTimingStatistics = new GroupedTimingStatistics();
-        groupedTimingStatistics.setStartTime(System.currentTimeMillis());
         groupedTimingStatistics.addStopWatches(arrayList);
         groupedTimingStatistics.setStopTime(System.currentTimeMillis());
-
         return groupedTimingStatistics.toString();
     }
 }

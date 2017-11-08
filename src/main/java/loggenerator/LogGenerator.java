@@ -43,15 +43,11 @@ public class LogGenerator {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
         System.out.println(output);
-
         System.out.println();
     }
 
     private static void openLogFile() {
-
         Desktop desktop = null;
         if (Desktop.isDesktopSupported()) {
             desktop = Desktop.getDesktop();
@@ -72,7 +68,6 @@ public class LogGenerator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private static void openExelFile() {
@@ -85,18 +80,14 @@ public class LogGenerator {
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
-
     }
 
     private static void exelFileGenerator() {
-
         try {
             Runtime.getRuntime().exec("java -jar perf4j-0.9.16.jar --graph perfGraphs.xls /logs/app-log.log");
-
         } catch (IOException ioe) {
             System.out.println("Here error!\n");
         }
-
     }
 }
 

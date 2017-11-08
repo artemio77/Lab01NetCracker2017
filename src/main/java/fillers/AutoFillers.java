@@ -12,18 +12,14 @@ import java.util.Random;
  */
 public class AutoFillers {
 
-    private static int ARRAY_LENGHT = 5500000;
-
+    private static int ARRAY_LENGHT = 100000000;
 
     private static int[] arr = new int[ARRAY_LENGHT];
 
     public static String formatNumbers(int a) {
-
         DecimalFormat numFormat;
         String number;
-
         numFormat = new DecimalFormat("#,###,###");
-
         number = numFormat.format(a);
         return number;
     }
@@ -48,7 +44,6 @@ public class AutoFillers {
         AutoFillers.arr = arr;
     }
 
-
     public static int[] firstFiller() {
 
         for (int j = 0; j < arr.length; j++) {
@@ -58,12 +53,9 @@ public class AutoFillers {
 
         }
         return arr;
-
-
     }
 
     public static int[] secondFiller() {
-
         for (int j = 0; j < arr.length; j++) {
 
             arr[j] = j;
@@ -83,19 +75,14 @@ public class AutoFillers {
             i--;
 
         }
-
         return arr;
     }
 
     public static int[] randomFilter() {
-
-
         for (int j = 0; j < arr.length; j++) {
 
             arr[j] = new Random().nextInt(1000000);
         }
-
-
         return arr;
     }
 

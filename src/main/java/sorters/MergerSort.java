@@ -23,13 +23,8 @@ public class MergerSort extends AllSorts {
         this.array = arr;
         this.length = arr.length;
         this.tempMergArr = new int[length];
-
-
         doMergeSort(0, length - 1);
-
-
         return array;
-
     }
 
 

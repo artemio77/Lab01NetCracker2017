@@ -20,8 +20,6 @@ public class BubleSortEndToStart extends AllSorts {
             }
         }
         return arr;
-
-
     }
 }
 
